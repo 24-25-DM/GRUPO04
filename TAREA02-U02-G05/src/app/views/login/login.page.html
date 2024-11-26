@@ -1,0 +1,33 @@
+<ion-content class="login-content" [fullscreen]="true">
+  <div class="background-image"></div>
+  <div class="login-container">
+    <ion-card class="glass-card">
+      <ion-card-content>
+        <h2 class="login-title">Login</h2>
+        
+        <div class="input-container">
+          <ion-label class="input-label">Usuario</ion-label>
+          <div class="rounded-input">
+            <ion-input [(ngModel)]="usuario" placeholder="Enter Username" type="text"></ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="usuarioError" class="error-message">
+          Usuario es requerido.
+        </ion-text>
+
+        <div class="input-container">
+          <ion-label class="input-label">Contrase&ntilde;a</ion-label>
+          <div class="rounded-input">
+            <ion-input [(ngModel)]="contrasena" [type]="showPassword ? 'text' : 'password'" placeholder="Enter Password"></ion-input>
+            <ion-icon [name]="showPassword ? 'eye-off' : 'eye'" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="contrasenaError" class="error-message">
+          Contrase&ntilde;a es requerida.
+        </ion-text>
+
+        <ion-button expand="full" shape="round" class="rounded-button custom-login-button" (click)="login()">Login</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
