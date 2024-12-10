@@ -1,0 +1,88 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.rounded-item {
+  --background: rgba(255, 255, 255, 0.2);
+  --padding: 10px;
+  --inner-border-width: 0px;
+  /* Eliminar la línea al final de cada input */
+  --border: 1px solid #1719b1;
+  /* Añadir borde a las cajas de input */
+  justify-content: center;
+  align-items: center;
+}
+
+.formularioVehiculoinp {
+  --background: rgba(255, 255, 255, 0.2);
+  --border-radius: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border: 1px solid #2a11eb;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.formularioVehiculo {
+  font-family: 'Arial', sans-serif;
+  /* Cambiar la fuente del label */
+  margin-bottom: 10px;
+  /* Añadir espacio entre el label y el input */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+  /* Asegurar que el contenedor del botón ocupe todo el ancho */
+}
+
+.rounded-button {
+  width: 100%;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  padding-left: 16px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  /* Centra el modal verticalmente */
+  padding-top: 10%;
+}
+
+.date-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+

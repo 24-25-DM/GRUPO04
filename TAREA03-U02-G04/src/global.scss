@@ -1,0 +1,155 @@
+/* src/global.scss */
+
+/* Definición de variables */
+$gradient-background: linear-gradient(125deg, #241570, #1E456E, #316195, #52B2C0, #52B2C0);
+$button-gradient-background: linear-gradient(135deg, #316195, #52B2C0); /* Nuevo gradiente para los botones */
+$create-button-gradient: linear-gradient(135deg, #28a745, #218838); /* Gradiente para el botón de crear */
+$delete-button-gradient: linear-gradient(135deg, #dc3545, #c82333); /* Gradiente para el botón de eliminar */
+$add-button-gradient: linear-gradient(135deg, #ffc107, #e0a800); /* Gradiente para el botón de añadir */
+
+$color-white: white;
+$border-color: #505050;
+$border-width: 4px 0;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$border-radius: 5px;
+$padding: 10px;
+
+/* Variables para los colores de los botones */
+$button-background: #241570;
+$button-background-hover: #e09cab;
+$button-background-activated: #f48888;
+$button-background-focused: #f48896;
+$button-border-radius: 20px;
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/***************************************************************************************************/
+/* Estilos globales para el contenido de login */
+/***************************************************************************************************/
+
+/* Configuraciones globales para ion-toolbar */
+ion-toolbar {
+  --background: #{$gradient-background};
+  --color: #{$color-white};
+  --min-height: 50px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+/* Configuraciones globales para ion-fab-button */
+ion-fab-button {
+  --background: #{$gradient-background};
+  --background-activated: #878cda;
+  --background-hover: #57539b;
+  --border-radius: 15px;
+  --box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --color: #{$color-white};
+}
+
+/* Configuraciones globales para ion-button */
+ion-button {
+  --background: #{$button-gradient-background}; /* Aplica el nuevo gradiente */
+  --background-hover: #{$button-background-hover};
+  --background-activated: #{$button-background-activated};
+  --background-focused: #{$button-background-focused};
+  --color: #{$color-white};
+  --border-radius: #{$button-border-radius};
+  --border-color: #000;
+  --border-width: 1px;
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  --ripple-color: deeppink;
+  --padding-top: #{$padding};
+  --padding-bottom: #{$padding};
+}
+
+/* Configuraciones globales para ion-input */
+ion-input {
+  --background: rgba(255, 255, 255, 0.2);
+  --border-radius: #{$border-radius};
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+/* Configuraciones globales para ion-modal */
+ion-modal {
+  --background: rgba(255, 255, 255, 0.9);
+  --border-radius: 10px;
+  --box-shadow: #{$box-shadow};
+}
+
+/* Configuraciones globales para ion-card */
+ion-card {
+  border: 1px solid #2a11eb; /* Contorno de la carta */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
+  color: #000000; /* Color del texto para contraste */
+}
+
+/*Configuracion de toast (mensaje a pantalla movil)*/
+.custom-toast {
+  --background: #040042;
+  --border-radius: 15px;
+  --color: #ffffff;
+  --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: medium;
+  font-style: italic;
+}
+
+/*Configuracion de alert (mensaje a pantalla movil)*/
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.alert-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cancel {
+  --background: linear-gradient(135deg, #ff0707, #e04b00); 
+  --color: white;
+}
+
+.accept {
+  --background: linear-gradient(135deg, #048a02, #00e04e); 
+  --color: white;
+}

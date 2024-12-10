@@ -1,0 +1,81 @@
+<ion-content class="register-content" [fullscreen]="true">
+  <!-- Ola en la parte superior -->
+  <div class="wave-background"></div>
+
+  <!-- Contenedor Welcome -->
+  <div class="welcome-container">
+    <h1 class="welcome-title">Registro</h1>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <ion-text color="success" *ngIf="mensajeExito" class="success-message">
+    {{ mensajeExito }}
+  </ion-text>
+
+  <!-- Contenedor de registro -->
+  <div class="register-container">
+    <ion-card class="glass-card">
+      <h2 class="register-title">Regístrate</h2>
+      <ion-card-content>
+        <div class="input-container">
+          <ion-label class="input-label">Nombre Completo</ion-label>
+          <div class="rounded-input">
+            <ion-input class="custom-input" [(ngModel)]="nombreCompleto" placeholder="Ingrese su nombre completo" type="text"></ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="nombreCompletoError" class="error-message">
+          {{ nombreCompletoError }}
+        </ion-text>
+
+        <div class="input-container">
+          <ion-label class="input-label">Usuario</ion-label>
+          <div class="rounded-input">
+            <ion-input class="custom-input" [(ngModel)]="usuario" placeholder="Ingrese su usuario" type="text"></ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="usuarioError" class="error-message">
+          {{ usuarioError }}
+        </ion-text>
+
+        <div class="input-container">
+          <ion-label class="input-label">Correo</ion-label>
+          <div class="rounded-input">
+            <ion-input class="custom-input" [(ngModel)]="correo" placeholder="Ingrese su correo" type="email"></ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="correoError" class="error-message">
+          {{ correoError }}
+        </ion-text>
+
+        <div class="input-container">
+          <ion-label class="input-label">Contraseña</ion-label>
+          <div class="rounded-input">
+            <ion-input class="custom-input" [(ngModel)]="contrasena" [type]="showPassword ? 'text' : 'password'" placeholder="Ingrese su contraseña">
+              <ion-icon class="password-icon" [name]="showPassword ? 'eye-off' : 'eye'" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+            </ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="contrasenaError" class="error-message">
+          {{ contrasenaError }}
+          <br>
+        </ion-text>
+
+        <div class="button-container">
+          <ion-button shape="round" class="rounded-button custom-register-button" (click)="register()">Registrarse</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Alerta de confirmación para volver al menú principal -->
+  <div *ngIf="isAlertOpen" class="custom-alert">
+    <div class="alert-content">
+      <h2>Confirmar</h2>
+      <p>¿Estás seguro de que deseas salir del registro?</p>
+      <div class="alert-buttons">
+        <ion-button (click)="backLogin()" class="accept">Aceptar</ion-button>
+        <ion-button (click)="cancelAlert()" class="cancel">Cancelar</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
