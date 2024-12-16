@@ -1,0 +1,30 @@
+.user-info {
+    text-align: center;
+    ion-avatar {
+      margin: 0 auto;
+      display: block;
+    }
+    ion-label {
+      display: block;
+      margin-top: 10px;
+    }
+ 
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Espacio entre las cartas */
+  }
+  
+    .delete-button {
+    --background: #241570;
+  }
+  
+  .edit-button {
+    --background: #316195;
+  }
+  
+  .new-button {
+    --background: #52B2C0;
+  }

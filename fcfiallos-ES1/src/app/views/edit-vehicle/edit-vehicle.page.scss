@@ -1,0 +1,17 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    /* Espacio entre las cartas */
+}
+.button-container {
+    display: block;
+    justify-content: center;
+    padding-left: 40px;
+    padding-bottom: 35px;
+}
+
+.button-container ion-button {
+    --background: linear-gradient(135deg, #ff8707, #e0a800); 
+    height: 40px;
+}
