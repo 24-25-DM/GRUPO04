@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Veh&iacute;culo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="form-container" *ngIf="vehicle">
+    <form (ngSubmit)="updateVehicle()">
+      <!-- Placa-->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Placa</ion-label>
+          <ion-input class="formularioVehiculoinp readonly-field" type="text" [(ngModel)]="vehicle.placa" name="placa"
+            placeholder="ABC-123" readonly></ion-input>
+        </ion-item>
+        <ion-note *ngIf="isFormSubmitted && vehicle.placa === ''" color="danger" class="error-message">La placa es
+          obligatoria.</ion-note>
+      </div>
+
+      <!-- Marca -->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Marca</ion-label>
+          <ion-input class="formularioVehiculoinp" type="text" [(ngModel)]="vehicle.marca" name="marca"
+            placeholder="Ejemplo: Toyota" required></ion-input>
+        </ion-item>
+        <ion-note *ngIf="isFormSubmitted && vehicle.marca === ''" color="danger" class="error-message">La marca es
+          obligatoria.</ion-note>
+      </div>
+
+      <!-- Fecha de fabricación -->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Fecha de Fabricaci&oacute;n</ion-label>
+          <ion-input class="formularioVehiculoinp readonly-field" type="text" [value]="vehicle.fecFabricacion" readonly
+            name="fecFabricacion" placeholder="yyyy-mm-dd"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="isFormSubmitted && vehicle.fecFabricacion === ''" color="danger" class="error-message">La fecha
+          de fabricaci&oacute;n es obligatoria.</ion-note>
+      </div>
+
+      <!-- Color -->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Color</ion-label>
+          <ion-select class="formularioVehiculoinp" [(ngModel)]="vehicle.color" name="color" required>
+            <ion-select-option value="blanco">Blanco</ion-select-option>
+            <ion-select-option value="negro">Negro</ion-select-option>
+            <ion-select-option value="azul">Azul</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-note *ngIf="isFormSubmitted && vehicle.color === ''" color="danger" class="error-message">El color es
+          obligatorio.</ion-note>
+      </div>
+
+      <!-- Costo -->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Costo</ion-label>
+          <ion-input class="formularioVehiculoinp" type="number" [(ngModel)]="vehicle.costo" name="costo"
+            placeholder="99999" required></ion-input>
+        </ion-item>
+        <ion-note *ngIf="isFormSubmitted && (vehicle.costo === null || vehicle.costo <= 0)" color="danger"
+          class="error-message">
+          El costo es obligatorio y mayor que 0.
+        </ion-note>
+      </div>
+
+      <!-- Estado del vehículo -->
+      <div class="input-container">
+        <ion-item class="rounded-item">
+          <ion-label class="formularioVehiculo" position="stacked">Estado del vehículo</ion-label>
+          <ion-toggle [(ngModel)]="vehicle.activo" name="activo" (ionChange)="onToggleChange()"> {{ vehicle.activo ?
+            'Activo' : 'Inactivo' }}</ion-toggle>
+        </ion-item>
+      </div>
+
+      <div class="button-container">
+        <ion-button class="rounded-button" type="submit">Modificar Vehiculo</ion-button>
+      </div>
+    </form>
+
+    <!-- Alerta de confirmación para volver al menu principal-->
+    <div *ngIf="isAlertOpen" class="custom-alert">
+      <div class="alert-content">
+        <h2>Confirmar</h2>
+        <p>¿Estás seguro de que deseas salir del modo editar?</p>
+        <div class="alert-buttons">
+          <ion-button (click)="backVehicles()" class="accept">Aceptar</ion-button>
+          <ion-button (click)="cancelAlert()" class="cancel">Cancelar</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

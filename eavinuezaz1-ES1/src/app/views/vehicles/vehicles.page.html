@@ -1,0 +1,72 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Men&uacute;</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="user-info">
+      <ion-avatar>
+        <img [src]="user?.imagen" alt="Imagen de usuario">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ user?.nombre }} {{ user?.apellido }}</h2>
+      </ion-label>
+      <ion-button (click)="logout()">
+        Cerrar Sesión
+      </ion-button>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Veh&iacute;culo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="card-container">
+      <ion-card *ngFor="let vehicle of vehicles">
+        <ion-card-header>
+          <ion-card-title>{{ vehicle.marca }} - {{vehicle.placa}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item lines="none">
+            <p>{{ vehicle.color }} - {{vehicle.fecFabricacion | date: 'yyyy-MM-dd' }} - {{vehicle.activo ? 'Activo' : 'Inactivo' }}</p>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="grid"></ion-icon>
+    </ion-fab-button>
+      <ion-fab-list side="top">
+      <ion-fab-button class="delete-button" (click)="goToDeleteVehicle()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="edit-button" (click)="goToEditVehicle()">
+        <ion-icon name="create"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button class="new-button" (click)="goToNewVehicle()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</div>
+<div *ngIf="isAlertOpen" class="custom-alert">
+  <div class="alert-content">
+    <h2>Confirmar</h2>
+    <p>¿Estás seguro de que deseas salir del modo editar?</p>
+    <div class="alert-buttons">
+      <ion-button (click)="backLogin()" class="accept">Aceptar</ion-button>
+      <ion-button (click)="cancelAlert()" class="cancel">Cancelar</ion-button>
+    </div>
+  </div>
+</div>
