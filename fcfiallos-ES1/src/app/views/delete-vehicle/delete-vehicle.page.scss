@@ -1,0 +1,11 @@
+.button-container {
+  display: block;
+  justify-content: center;
+  padding-left: 40px;
+  padding-bottom: 35px;
+}
+
+.button-container ion-button {
+  --background: linear-gradient(135deg, #ff0707, #e04b00); 
+  height: 40px;
+}

@@ -1,0 +1,155 @@
+/* Ola SVG */
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ajusta la altura según sea necesario */
+  z-index: -1;
+  overflow: hidden;
+  background-image: url('/assets/img/fondo-login.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: top right; /* Posiciona la imagen en la esquina superior derecha */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+svg {
+  transform: rotate(180deg); 
+}
+
+/* Contenedor del Welcome */
+.welcome-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.welcome-title {
+  font-size: 28px; /* Tamaño del texto */
+  color: #ffffff; /* Color blanco */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Mensaje de éxito */
+.success-message {
+  text-align: center;
+  font-size: 1rem;
+  margin: 20px 0;
+  color: #28a745; /* Color verde para el mensaje de éxito */
+}
+
+/* Contenedor centrado */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo del card */
+.glass-card {
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  box-shadow: none;
+  background: transparent;
+  margin-top: 80px;
+}
+
+ion-card {
+  color: #2a11eb; 
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1px; /* Aumenta el margen inferior */
+ color: #000000;
+}
+
+/* Estilos del input */
+.input-container {
+  margin-bottom: 10px;
+ 
+}
+
+.input-label {
+  display: block;
+  color: #000000;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.rounded-input {
+  border-radius: 20px;
+  padding: 3px 7px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Configuraciones globales para ion-input */
+ion-input {
+  --border-radius: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: #000000;
+  border: 1px solid #2a11eb; 
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ajusta el ancho según sea necesario */
+  height: 40px; /* Ajusta la altura según sea necesario */
+}
+
+.password-icon {
+  color: #2a11eb; 
+}
+
+.error-message {
+  text-align: center; /* Centra el texto de los mensajes de error */
+  display: block;
+  margin: 10px 0; /* Añade margen para separar los mensajes de error */
+}
+
+.register-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.register-container span {
+  color: #3b3b3b;
+}
+
+.register-container a {
+  color:  #2a11eb; 
+  font-weight: bold;
+}
+
+/* Botón personalizado */
+.custom-login-button {
+  display: block;
+  width: 130px; /* Ajusta el ancho según sea necesario */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+  background: linear-gradient(145deg, #316195, #47a3b1);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.custom-login-button:hover {
+  background: #1f4976;
+}
