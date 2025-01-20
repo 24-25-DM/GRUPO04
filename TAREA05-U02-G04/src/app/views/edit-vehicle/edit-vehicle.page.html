@@ -1,0 +1,41 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Seleccionar Veh&iacute;culo para modificar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div class="card-container">
+      <ion-card *ngFor="let vehicle of vehicles">
+        <ion-card-header>
+          <ion-card-title>{{ vehicle.marca }} - {{vehicle.placa}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item lines="none">
+            <p>{{ vehicle.color }} - {{vehicle.fecFabricacion | date: 'yyyy-MM-dd' }} - {{vehicle.activo ? 'Activo' :
+              'Inactivo' }}</p>
+            <div class="button-container"><ion-button (click)="redirectToEditVehicle(vehicle)">Editar</ion-button></div>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <!-- Alerta de confirmación para volver al menu principal-->
+  <div *ngIf="isAlertOpen" class="custom-alert">
+    <div class="alert-content">
+      <h2>Confirmar</h2>
+      <p>¿Estás seguro de que deseas salir del modo edici&oacute;n?</p>
+      <div class="alert-buttons">
+        <ion-button (click)="backVehicles()" class="accept">Aceptar</ion-button>
+        <ion-button (click)="cancelAlert()" class="cancel">Cancelar</ion-button>
+      </div>
+    </div>
+  </div>
+
+</div>

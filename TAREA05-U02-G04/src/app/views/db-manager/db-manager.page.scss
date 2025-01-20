@@ -1,0 +1,58 @@
+ion-col {
+    background-color: #316195;
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+}
+/* filepath: /c:/Users/LEONARDO/Desktop/IONIC/proyectoDispositivos/src/app/views/db-manager/db-manager.page.scss */
+
+/* Estilos para el ion-header y ion-toolbar */
+ion-header {
+    ion-toolbar {
+      background-color: #f8f9fa; /* Color de fondo de la barra superior */
+      color: #f4efef; /* Color del texto en la barra superior */
+    }
+  
+    ion-title {
+      font-size: 1.5rem; /* Tamaño de la fuente del título */
+      font-weight: bold; /* Negrita para el título */
+    }
+  
+    ion-buttons {
+      ion-button {
+        --background: #007bff; /* Color de fondo del botón */
+        --color: #fff; /* Color del texto del botón */
+        --border-radius: 8px; /* Radio de borde del botón */
+        --padding-start: 10px; /* Padding al inicio */
+        --padding-end: 10px; /* Padding al final */
+        --padding-top: 5px; /* Padding arriba */
+        --padding-bottom: 5px; /* Padding abajo */
+        display: flex;
+        align-items: center;
+  
+        ion-icon {
+          margin-right: 5px; /* Espacio entre el icono y el texto */
+        }
+      }
+    }
+  }
+  
+  /* Estilos para el contenido */
+  ion-content {
+    ion-item {
+      margin: 20px; /* Margen alrededor del ion-item */
+    }
+  
+    ion-button {
+      margin: 20px; /* Margen alrededor del ion-button */
+    }
+  
+    ion-text {
+      margin: 20px; /* Margen alrededor del ion-text */
+      text-align: center; /* Centrar el texto */
+    }
+  
+    ion-grid {
+      margin: 20px; /* Margen alrededor del ion-grid */
+    }
+  }
