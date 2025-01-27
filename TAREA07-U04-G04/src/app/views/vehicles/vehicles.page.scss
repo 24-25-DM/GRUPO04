@@ -1,0 +1,34 @@
+.user-info {
+  text-align: center;
+
+  ion-avatar {
+    margin: 0 auto;
+    display: block;
+  }
+
+  ion-label {
+    display: block;
+    margin-top: 10px;
+  }
+
+}
+
+.color-thumbnail{
+  border:1px solid #241570;
+}
+
+.delete-button {
+  --background: #241570;
+}
+
+.edit-button {
+  --background: #316195;
+}
+
+.new-button {
+  --background: #52B2C0;
+}
+
+.db-button {
+  --background: #258666;
+}
