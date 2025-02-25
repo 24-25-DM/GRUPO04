@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    /* Espacio entre las cartas */
+}
+.button-container {
+    display: block;
+    justify-content: center;
+    padding-left: 40px;
+    padding-bottom: 35px;
+}
+.color-card{
+    border:1px solid #e0a800;
+}
+.color-thumbnail{
+    border:1px solid #e0a800;
+}
+
+.button-container ion-button {
+    --background: linear-gradient(135deg, #ff8707, #e0a800); 
+    height: 40px;
+}

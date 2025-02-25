@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Laboratorio de Informática",
+        "url_imagen": "https://i.postimg.cc/NFHz8WMS/lab-com.jpg",
+        "descripcion": "Laboratorios Salas A y B para las carreras de Computación y Sistemas de la Información",
+        "longitud": -78.503022,
+        "latitud": -0.1985421
+    },
+    {
+        "id": 2,
+        "titulo": "Laboratorio de Hidráulica",
+        "url_imagen": "https://i.postimg.cc/HWcRC72z/lab-hidro.jpg",
+        "descripcion": "Laboratorio para la Carrera de Civil",
+        "longitud": -78.504242,
+        "latitud": -0.1978324
+    },
+    {
+        "id": 3,
+        "titulo": "Laboratorio de Materiales",
+        "url_imagen": "https://i.postimg.cc/0yW0QV5w/lab-suelos.jpg",
+        "descripcion": "Laboratorios para las prácticas de Física",
+        "longitud": -78.503345,
+        "latitud": -0.198011
+    }
+]

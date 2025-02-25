@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>DB Manager</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">SQL Query</ion-label>
+    <ion-input [(ngModel)]="sqlQuery"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="executeQuery()">Execute</ion-button>
+
+  <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+
+  <ion-grid *ngIf="queryResults.length > 0">
+    <ion-row>
+      <ion-col *ngFor="let key of queryKeys"><strong>{{ key }}</strong></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let row of queryResults">
+      <ion-col *ngFor="let key of queryKeys">{{ row[key] }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- Alerta de confirmación para volver al menu principal-->
+<div *ngIf="isAlertOpen" class="custom-alert">
+  <div class="alert-content">
+    <h2>Confirmar</h2>
+    <p>¿Estás seguro de que deseas salir del modo gestor de DB?</p>
+    <div class="alert-buttons">
+      <ion-button (click)="backVehicles()" class="accept">Aceptar</ion-button>
+      <ion-button (click)="cancelAlert()" class="cancel">Cancelar</ion-button>
+    </div>
+  </div>
+</div>

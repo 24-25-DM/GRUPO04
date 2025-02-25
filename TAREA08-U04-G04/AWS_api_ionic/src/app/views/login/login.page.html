@@ -1,0 +1,49 @@
+<ion-content class="login-content" [fullscreen]="true">
+  <!-- Ola en la parte superior -->
+  <div class="wave-background"></div>
+
+  <!-- Contenedor Welcome -->
+  <div class="welcome-container">
+    <h1 class="welcome-title">Bienvenido</h1>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <ion-text color="success" *ngIf="mensajeExito" class="success-message">
+    {{ mensajeExito }}
+  </ion-text>
+
+  <!-- Contenedor de inicio de sesión -->
+  <div class="login-container">
+    <ion-card class="glass-card">
+      <h2 class="login-title">Log In</h2>
+      <ion-card-content>
+        <div class="input-container">
+          <ion-label class="input-label">Usuario</ion-label>
+          <div class="rounded-input">
+            <ion-input [(ngModel)]="usuario" placeholder="Ingrese su usuario" type="text"></ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="usuarioError" class="error-message">
+          El usuario es requerido.
+        </ion-text>
+        <div class="input-container">
+          <ion-label class="input-label">Contraseña</ion-label>
+          <div class="rounded-input">
+            <ion-input [(ngModel)]="contrasena" [type]="showPassword ? 'text' : 'password'" placeholder="Ingrese su contrase&ntilde;a">
+              <ion-icon class="password-icon" [name]="showPassword ? 'eye-off' : 'eye'" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+            </ion-input>
+          </div>
+        </div>
+        <ion-text color="danger" *ngIf="contrasenaError" class="error-message">
+          La Contrase&ntilde;a es requerido.
+        </ion-text>
+
+        <div class="register-container">
+          <span>¿Eres nuevo? </span><a [routerLink]="['/register']">Regístrate</a>
+        </div>
+
+        <ion-button shape="round" class="rounded-button custom-login-button" (click)="login()">Log in</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

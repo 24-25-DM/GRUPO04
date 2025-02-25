@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "titulo": "Carrera de Ingeniería Civil",
+        "url_imagen": "https://i.postimg.cc/25JQr3jR/carr-civil.jpg",
+        "descripcion": "En este edificio es encuentra tanto los laboratorios de materiales como las Aulas S",
+        "longitud": -78.5030616,
+        "latitud":-0.198464
+    },
+    {
+        "id": 2,
+        "titulo": "Carrera de Sistemas de la Información",
+        "url_imagen": "https://i.postimg.cc/xCf2jj65/carr-info.jpg",
+        "descripcion": "En este edificio se encuentran las Aulas S",
+        "longitud": -78.5032824,
+        "latitud": -0.1981037
+    },
+    {
+        "id": 3,
+        "titulo": "Carrera de Ingeniería de Computación",
+        "url_imagen": "https://i.postimg.cc/sfJMJvFj/carr-com.jpg",
+        "descripcion": "En este edificio se encuentran los laboratorios de informática A y B. Así como las aulas R",
+        "longitud":-78.5030026 ,
+        "latitud":-0.1984912
+    },
+    {
+        "id": 5,
+        "titulo": "Carrera de Ciencias Químicas",
+        "url_imagen": "https://i.postimg.cc/3x4dX1Cp/quimica.jpg",
+        "descripcion": "Aulas para las carreras de Quimica,",
+        "longitud":-78.50477 ,
+        "latitud":-0.19802
+    }
+]

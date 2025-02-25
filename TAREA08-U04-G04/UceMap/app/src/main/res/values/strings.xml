@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UceMap</string>
+    <string name="title_home">Administración</string>
+    <string name="title_dashboard">Facultades</string>
+    <string name="title_notifications">Laboratorios</string>
+    <string name="map_content_description">Map view</string>
+    <string name="splash_logo_desc">Splash screen logo</string>
+
+</resources>

@@ -1,0 +1,214 @@
+{
+  "mejor_camino": [
+    {
+      "latitude": -0.1981979,
+      "longitude": -78.5040317
+    },
+    {
+      "latitude": -0.1982135,
+      "longitude": -78.5039136
+    },
+    {
+      "latitude": -0.198251,
+      "longitude": -78.5038201
+    },
+    {
+      "latitude": -0.1984564,
+      "longitude": -78.5038545
+    },
+    {
+      "latitude": -0.1985583,
+      "longitude": -78.5038089
+    },
+    {
+      "latitude": -0.1987088,
+      "longitude": -78.5036121
+    },
+    {
+      "latitude": -0.1986337,
+      "longitude": -78.5035102
+    },
+    {
+      "latitude": -0.1985166,
+      "longitude": -78.5032702
+    },
+    {
+      "latitude": -0.1984328,
+      "longitude": -78.5034424
+    },
+    {
+      "latitude": -0.198182,
+      "longitude": -78.5033593
+    }
+  ],
+  "camino_1": [
+    {
+      "latitude": -0.1981979,
+      "longitude": -78.5040317
+    },
+    {
+      "latitude": -0.1982135,
+      "longitude": -78.5039136
+    },
+    {
+      "latitude": -0.198251,
+      "longitude": -78.5038201
+    },
+    {
+      "latitude": -0.1981371,
+      "longitude": -78.5037991
+    },
+    {
+      "latitude": -0.1979861,
+      "longitude": -78.5037724
+    },
+    {
+      "latitude": -0.197836,
+      "longitude": -78.5037482
+    },
+    {
+      "latitude": -0.1977804,
+      "longitude": -78.5037186
+    },
+    {
+      "latitude": -0.1978368,
+      "longitude": -78.5035326
+    },
+    {
+      "latitude": -0.1978608,
+      "longitude": -78.5034612
+    },
+    {
+      "latitude": -0.1977805,
+      "longitude": -78.5034253
+    },
+    {
+      "latitude": -0.1978877,
+      "longitude": -78.5032268
+    },
+    {
+      "latitude": -0.1979816,
+      "longitude": -78.5032724
+    },
+    {
+      "latitude": -0.1980272,
+      "longitude": -78.5032805
+    },
+    {
+      "latitude": -0.198182,
+      "longitude": -78.5033593
+    }
+  ],
+  "camino_2": [
+    {
+      "latitude": -0.1981979,
+      "longitude": -78.5040317
+    },
+    {
+      "latitude": -0.1982135,
+      "longitude": -78.5039136
+    },
+    {
+      "latitude": -0.198251,
+      "longitude": -78.5038201
+    },
+    {
+      "latitude": -0.1985193,
+      "longitude": -78.5038281
+    },
+    {
+      "latitude": -0.198995,
+      "longitude": -78.5038747
+    },
+    {
+      "latitude": -0.1986957,
+      "longitude": -78.5036047
+    },
+    {
+      "latitude": -0.1986337,
+      "longitude": -78.5035102
+    },
+    {
+      "latitude": -0.1985166,
+      "longitude": -78.5032702
+    },
+    {
+      "latitude": -0.1984328,
+      "longitude": -78.5034424
+    },
+    {
+      "latitude": -0.198182,
+      "longitude": -78.5033593
+    }
+  ],
+  "camino_3": [
+    {
+      "latitude": -0.1981979,
+      "longitude": -78.5040317
+    },
+    {
+      "latitude": -0.1982135,
+      "longitude": -78.5039136
+    },
+    {
+      "latitude": -0.198251,
+      "longitude": -78.5038201
+    },
+    {
+      "latitude": -0.1981857,
+      "longitude": -78.5038118
+    },
+    {
+      "latitude": -0.1980956,
+      "longitude": -78.5040395
+    },
+    {
+      "latitude": -0.198002,
+      "longitude": -78.5044941
+    },
+    {
+      "latitude": -0.1978381,
+      "longitude": -78.5044526
+    },
+    {
+      "latitude": -0.1976637,
+      "longitude": -78.5043936
+    },
+    {
+      "latitude": -0.1974106,
+      "longitude": -78.5041444
+    },
+    {
+      "latitude": -0.1975125,
+      "longitude": -78.5037233
+    },
+    {
+      "latitude": -0.1976187,
+      "longitude": -78.5033459
+    },
+    {
+      "latitude": -0.1976718,
+      "longitude": -78.5031866
+    },
+    {
+      "latitude": -0.1978059,
+      "longitude": -78.5032429
+    },
+    {
+      "latitude": -0.1978877,
+      "longitude": -78.5032268
+    },
+    {
+      "latitude": -0.1979816,
+      "longitude": -78.5032724
+    },
+    {
+      "latitude": -0.1980272,
+      "longitude": -78.5032805
+    },
+    {
+      "latitude": -0.198182,
+      "longitude": -78.5033593
+    }
+  ]
+}

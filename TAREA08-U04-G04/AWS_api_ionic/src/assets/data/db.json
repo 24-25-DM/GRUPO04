@@ -1,0 +1,83 @@
+{
+    "database": "basededatos.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+      {
+        "name": "languages",
+        "schema": [
+          {
+            "column": "name",
+            "value": "TEXT NOT NULL PRIMARY KEY"
+          }
+        ]
+      },
+      {
+        "name": "users",
+        "schema": [
+          {
+            "column": "usuario",
+            "value": "TEXT NOT NULL PRIMARY KEY"
+          },
+          {
+            "column": "nombre",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "apellido",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "contrasenia",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "imagen",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "correo",
+            "value": "TEXT NOT NULL"
+          }
+        ]
+      },
+      {
+        "name": "vehicles",
+        "schema": [
+          {
+            "column": "placa",
+            "value": "TEXT NOT NULL PRIMARY KEY"
+          },
+          {
+            "column": "marca",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "fecFabricacion",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "color",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "costo",
+            "value": "INTEGER NOT NULL"
+          },
+          {
+            "column": "activo",
+            "value": "BOOLEAN NOT NULL"
+          },
+          {
+            "column": "oculto",
+            "value": "BOOLEAN NOT NULL"
+          },
+          {
+            "column": "fotoUrl",
+            "value": "TEXT NOT NULL" 
+          }
+        ]
+      }
+    ]
+  }
